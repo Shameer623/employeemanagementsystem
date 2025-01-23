@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Employee Management System</h1>
+
+    <div class="container">
+        <!-- Employee Section -->
+        <section id="employee-section">
+            <h2>Employees</h2>
+            <form id="employee-form">
+                <input type="hidden" id="employee-id" value="">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" required>
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" required>
+                <label for="department-id">Department ID:</label>
+                <input type="number" id="department-id" required>
+                <button type="submit">Add/Update Employee</button>
+            </form>
+            <button onclick="fetchEmployees()">Refresh Employees</button>
+            <ul id="employee-list"></ul>
+        </section>
+
+        <!-- Department Section -->
+        <section id="department-section">
+            <h2>Departments</h2>
+            <form id="department-form">
+                <input type="hidden" id="department-id" value="">
+                <label for="short-name">Short Name:</label>
+                <input type="text" id="short-name" required>
+                <label for="department-name">Department Name:</label>
+                <input type="text" id="department-name" required>
+                <button type="submit">Add/Update Department</button>
+            </form>
+            <button onclick="fetchDepartments()">Refresh Departments</button>
+            <ul id="department-list"></ul>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
